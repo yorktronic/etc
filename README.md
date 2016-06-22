@@ -6,4 +6,4 @@
   * order_date (TEXT in the format YYYY-MM-DD and ignoring hours, minutes, and seconds for the sake of this problem)
 3. The CEO just asked: "What is the average time between orders across all customers"?
 
-What's your query, yo?
+What's your query, yo? You are only permitted to use SQL Queries to solve this problem.
