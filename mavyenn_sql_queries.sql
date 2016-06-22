@@ -34,6 +34,7 @@ WHILE n > 0 DO
         WHERE (A.order_id > (SELECT min(order_id) from user_orders)) AND (A.order_id < (SELECT max(order_id) from user_orders))
     
     # Delete all rows pertaining to the user_id we just dealt with
+    # Eventually the row count for the temporary copy of the orders table will equal zero after this loop is done dropping rows
     DELETE FROM orders_copy
         WHERE user_id = (SELECT MIN(user_id) FROM orders)
     
