@@ -4,11 +4,13 @@ def isPalindrome(arg):
 
 	# create a set containing only unique values of arg
 	chars = set(arg)
-	
+
 	# count how many characters have an odd count
 	odd = 0
 	for char in chars:
 		if arg.count(char) % 2 != 0: odd += 1
+		if odd > 1: False
+	
 	return (odd == 1)
 
 # Tests
