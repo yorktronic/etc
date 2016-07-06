@@ -1,3 +1,5 @@
+# Checks if a passed in string has any permutation that is a palindrome
+
 def isPalindrome(arg):
 	# lower case of all characters
 	arg = arg.lower()
