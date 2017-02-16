@@ -10,14 +10,14 @@ sudo apt-get -y install python3
 sudo apt-get -y install python-pip
 
 # Docker
-curl -fsSL https://get.docker.com/ | sh
+# curl -fsSL https://get.docker.com/ | sh
 
 # PostgreSQL package repo and GnuPG public key
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/pgd
 
 # Update packages and install PostgreSQL
-apt-get update && apt-get -y -q install python-software-properties software-properties-common \
+sudo apt-get update && apt-get -y -q install python-software-properties software-properties-common \
     && apt-get -y -q install postgresql-9.3 postgresql-client-9.3 postgresql-contrib-9.3
 
 # Switch to postgres user and create db
